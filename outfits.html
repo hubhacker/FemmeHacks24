@@ -8,7 +8,9 @@
 <body>
     <h1> Check These Out!!</h1>
 
-    <p class="temp"></p>
+    <div class="display">
+        <p class="temperature" id="temperature"></p>
+    </div>
 
     <div class="topContainer">
         <div class="top">Tops!</div>
@@ -17,5 +19,11 @@
     </div>
 
     <script src="outfitgrid.js"></script>
+    <script src="app.js"></script> <!-- Import app.js -->
+    <script>
+        // Set tempValue to the temperature element
+        var temperature = document.getElementById("temperature");
+        temperature.innerHTML = tempValue;
+    </script>
 </body>
 </html>
