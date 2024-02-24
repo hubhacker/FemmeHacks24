@@ -9,14 +9,20 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+
  body{
   font-family: "Nunito",sans-serif;
-  background: #f8f8f8;
+  background: #e6e6e6;
 }
+
+
  .input{
   text-align: center;
   margin: 100px auto;
 }
+
+
  input[type="submit"]{
   padding: 15px 30px;
   background: #e7e7e7;
@@ -26,6 +32,8 @@ body {
   font-weight:bold;
   font-size: 20px;
 }
+
+
  .input input[type="text"]{
   width: 600px;
   height: 55px;
@@ -37,13 +45,16 @@ body {
   font-weight:bold;
   font-size: 20px;
 }
+
+
  .card{
   width: 50%;
-  background: #e7e7e7;
+  background: #8297B0;
   height: 40vh;
   margin: 50px auto;
   border-radius: 2px;
 }
+
 
 .close{
   float: right;
@@ -51,12 +62,24 @@ body {
   cursor: pointer;
   margin-right: 20px;
 }
+
+
  .card h1{
   padding: 5px 0;
   text-align: center;
 }
+
+
  .card p{
   text-align: center;
   margin:40px 0;
   font-size:20px;
+}
+
+.container {
+  color: #8297b0;
+}
+
+.main  {
+  color: #33a1e0
 }
