@@ -3,6 +3,14 @@ body {
   text-align: center;
 }
 
+h1 {
+  margin-top: 20px;
+  font-size:70px;
+}
+
+h2 {
+  
+}
 
 *{
   margin:0;
@@ -11,7 +19,7 @@ body {
 }
  body{
   font-family: "Nunito",sans-serif;
-  background: #f8f8f8;
+  background: #44576D;
 }
  .input{
   text-align: center;
@@ -19,9 +27,9 @@ body {
 }
  input[type="submit"]{
   padding: 15px 30px;
-  background: #e7e7e7;
+  background: #AAC7D8;
   border: none;
-  border-radius: 1px;
+  border-radius: 50px;
   font-family: "Nunito",sans-serif;
   font-weight:bold;
   font-size: 20px;
@@ -30,19 +38,20 @@ body {
   width: 600px;
   height: 55px;
   padding: 5px 10px;
-  background: #e7e7e7;
+  color: red;
+  background: #AAC7D8;
   border: none;
-  border-radius: 1px;
+  border-radius: 50px;
   font-family: "Nunito",sans-serif;
   font-weight:bold;
   font-size: 20px;
 }
  .card{
   width: 50%;
-  background: #e7e7e7;
+  background: #AAC7D8;
   height: 40vh;
-  margin: 50px auto;
-  border-radius: 2px;
+  margin: 30px auto;
+  border-radius: 50px;
 }
 
 .close{
@@ -59,4 +68,16 @@ body {
   text-align: center;
   margin:40px 0;
   font-size:20px;
+}
+
+.findButton {
+  padding: 15px 30px;
+  background: #AAC7D8;
+  border: none;
+  border-radius: 1px;
+  font-family: "Nunito",sans-serif;
+  font-weight:bold;
+  font-size: 20px;
+  border-radius: 50px;
+
 }
