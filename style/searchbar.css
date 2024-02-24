@@ -17,14 +17,20 @@ h2 {
   padding: 0;
   box-sizing: border-box;
 }
+
+
  body{
   font-family: "Nunito",sans-serif;
   background: #44576D;
 }
+
+
  .input{
   text-align: center;
   margin: 100px auto;
 }
+
+
  input[type="submit"]{
   padding: 15px 30px;
   background: #AAC7D8;
@@ -34,6 +40,8 @@ h2 {
   font-weight:bold;
   font-size: 20px;
 }
+
+
  .input input[type="text"]{
   width: 600px;
   height: 55px;
@@ -46,6 +54,8 @@ h2 {
   font-weight:bold;
   font-size: 20px;
 }
+
+
  .card{
   width: 50%;
   background: #AAC7D8;
@@ -54,16 +64,21 @@ h2 {
   border-radius: 50px;
 }
 
+
 .close{
   float: right;
   margin-top: -2px;
   cursor: pointer;
   margin-right: 20px;
 }
+
+
  .card h1{
   padding: 5px 0;
   text-align: center;
 }
+
+
  .card p{
   text-align: center;
   margin:40px 0;
