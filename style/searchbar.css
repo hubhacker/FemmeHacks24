@@ -14,11 +14,13 @@ body {
   z-index: 1; /* Set a higher z-index for other content to appear on top of the video */
 }
 
-/* .flower {
+.flowerIcon {
+  width: 50px; /* Adjust the size as needed */
+  vertical-align: middle; /* Aligns the icon vertically with the text */
+  margin-right: 10px; /* Spacing between the icon and the text */
+  margin-left: 10px; /* Spacing between the text and the icon */
+}
 
-  
-
-} */
 
 h1 {
   margin-top: 20px;
@@ -26,6 +28,12 @@ h1 {
   font-size:120px;
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
+  font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    
   
 }
 
