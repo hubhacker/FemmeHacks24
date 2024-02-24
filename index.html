@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style/searchbar.css"> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weather App</title>
+   <link rel="stylesheet" href="style/searchbar.css">
 </head>
 <body>
-    <h1>FASE FITS</h1>
-    <h2>Enter your location:</h2>
-    <div class="topnav">
-        <input type="text" placeholder="Search location.." >
-      </div>
-      
-    <button type="button">Enter</button script src="index.js"></script>
-
-
-
+   <h1>FASE FITS</h1>
+   <h2>Enter your location:</h2>
     
+       <body>
+           <!-- <div class="main">
+             <div class="header">
+               <h1>OpenWeatherMap API</h1>
+               <p>Enter any city name in the input box below to get the data</p>
+             </div> -->
+          
+             <div class="input">
+               <input type="text" placeholder="Search Location..." class="input_text">
+               <input type="submit" value="Enter" class="submit">
+             </div>
+           </div>
+        
+           <div class="container">
+             <div class="card">
+               <h1 class="name" id="name"></h1>
+               <p class="temp"></p>
+               <p class="clouds"></p>
+               <p class="desc"></p>
+             </div>
+           </div>
+         <script src="app.js"></script>
+         </body>
+
+
 </body>
-</html>
