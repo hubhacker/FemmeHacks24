@@ -18,7 +18,7 @@ h1 {
   margin-top: 20px;
   color: white;
   font-size:100px;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   
 }
@@ -104,7 +104,10 @@ h2 {
  .card p{
   text-align: center;
   margin:40px 0;
-  font-size:20px;
+  font-size:30px;
+  font-weight: bold;
+  font-family: "Nunito",sans-serif;
+  color: #29353C;
 }
 
 .findButton {
