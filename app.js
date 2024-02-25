@@ -71,21 +71,6 @@ function fetchData() {
     //   //throw err; // Re-throw the error to stop execution
     // });
 
-    })
-    .catch(err => alert("Please enter a valid city."));
-      topArray = [];
-        //checking temps and assigning clothes
-    if (tempValue >= -50 && tempValue <=40){
-      coldfits();
-    } else if (tempValue >= 41 && tempValue <=60){
-      chillyfits();
-    } else if (tempValue >= 61 && tempValue <=75){
-      warmfits();
-    } else if(tempValue > 75) {
-      hotfits();
-    } else {
-      hotfits();
-    }
 }
 
 //coldfits
