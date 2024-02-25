@@ -56,7 +56,7 @@ function fetchData() {
     .catch(err => alert("Please enter a valid city."));
       topArray = [];
         //checking temps and assigning clothes
-    if (tempValue >= 50 && tempValue <=40){
+    if (tempValue >= -50 && tempValue <=40){
       coldfits();
     } else if (tempValue >= 41 && tempValue <=60){
       chillyfits();
