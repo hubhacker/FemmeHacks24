@@ -1,4 +1,3 @@
-var tempValue;
 var topArray = [];
 var bottomArray = [];
 var shoesArray = [];
@@ -23,22 +22,22 @@ input.addEventListener('keypress', function (e) {
 });
 
 
-function clearArrays() {
-  topArray.splice(0, topArray.length);
-  bottomArray.splice(0, bottomArray.length);
-  shoesArray.splice(0, shoesArray.length);
-  accArray.splice(0, accArray.length);
-}
+// function clearArrays() {
+//   topArray.splice(0, topArray.length);
+//   bottomArray.splice(0, bottomArray.length);
+//   shoesArray.splice(0, shoesArray.length);
+//   accArray.splice(0, accArray.length);
+// }
 
 
 //fetching data from API
 function fetchData() {
-  clearArrays();
+  var tempValue; // Declare tempValue here
+
   fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&appid=50a7aa80fa492fa92e874d23ad061374')
     .then(response => response.json())
     .then(data => {
-
-      //assigning to HTML elements by class tags
+      // Update tempValue inside the fetch
       tempValue = data['main']['temp'];
       var nameValue = data['name'];
       var descValue = data['weather'][0]['description'];
@@ -52,34 +51,37 @@ function fetchData() {
       input.value = "";
 
       tempValue = parseInt(tempValue.toFixed(0));
+
+      if (tempValue <= 40){
+        coldfits();
+      } else if (tempValue >= 41 && tempValue <=60){
+        chillyfits();
+      } else if (tempValue >= 61 && tempValue <=75){
+        warmfits();
+      } else if(tempValue > 75) {
+        hotfits();
+      } else {
+        hotfits();
+      }
+
     })
-    .catch(err => alert("Please enter a valid city."));
-      topArray = [];
-        //checking temps and assigning clothes
-    if (tempValue >= 50 && tempValue <=40){
-      coldfits();
-    } else if (tempValue >= 41 && tempValue <=60){
-      chillyfits();
-    } else if (tempValue >= 61 && tempValue <=75){
-      warmfits();
-    } else if(tempValue > 75) {
-      hotfits();
-    } else {
-      hotfits();
-    }
+
+    // .catch(err => {
+    //   alert("Please enter a valid city.");
+    //   //throw err; // Re-throw the error to stop execution
+    // });
+
 }
 
 //coldfits
 function coldfits() {
-  
-  // clearImages();
+
   var coldTop1 = new Image();
   coldTop1.src = "img/cold_top_1.png";
   var coldTop2 = new Image();
   coldTop2.src = "img/cold_top_2.png";
   topArray.push(coldTop1, coldTop2);
 
-  
   var coldBottom1 = new Image();
   coldBottom1.src = "img/cold_bottom_1.png";
   var coldBottom2 = new Image();
@@ -102,7 +104,7 @@ function coldfits() {
   appendImages(topArray, document.querySelector('.tops'));
   appendImages(bottomArray, document.querySelector('.bottoms'));
   appendImages(shoesArray, document.querySelector('.shoes'));
-  appendImages(accArray, document.querySelector('.accsessories'));
+  appendImages(accArray, document.querySelector('.accessories'));
 }
 
 //chillyfits
@@ -173,12 +175,8 @@ function warmfits() {
   appendImages(accArray, document.querySelector('.accessories'));
 }
 
-
-
 // hotfits
 function hotfits() {
-  // clearImages();
-
   var hotTop1 = new Image();
   hotTop1.src = "img/hot_top_1.png";
   var hotTop2 = new Image();
@@ -215,17 +213,14 @@ function appendImages(imagesArray, container) {
   imagesArray.forEach(function(image) {
     container.appendChild(image);
   });
-  //clearArrays();
 }
 
-// function clearImages() {
-//   document.querySelector('.tops-content').innerHTML = '';
-//   document.querySelector('.bottoms-content').innerHTML = '';
-//   document.querySelector('.shoes-content').innerHTML = '';
-//   document.querySelector('.acc-content').innerHTML = '';
-// }
-
-
+ function clearImages() {
+   document.querySelector('.tops-content').innerHTML = '';
+   document.querySelector('.bottoms-content').innerHTML = '';
+   document.querySelector('.shoes-content').innerHTML = '';
+   document.querySelector('.acc-content').innerHTML = '';
+}
 
 // Function to update HTML content with array values
 function updateHTMLContent() {
@@ -236,5 +231,5 @@ function updateHTMLContent() {
 }
 
 // Call the function to update HTML content
-// clearImages();
+//clearImages();
 updateHTMLContent();
